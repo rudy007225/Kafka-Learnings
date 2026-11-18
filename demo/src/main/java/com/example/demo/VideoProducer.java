@@ -14,7 +14,7 @@ public class VideoProducer {
 
     public void sendPlayEvent(String message) {
         // "netflix-play-topic" naam ke folder (Topic) mein message bhej rahe hain
-        kafkaTemplate.send("netflix-play-topic", message);
+        kafkaTemplate.send("netflix-play-v2", message);
         System.out.println("1. [PRODUCER] Message has been sent to Kafka: " + message);
     }
 }
