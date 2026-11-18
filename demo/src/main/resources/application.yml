@@ -1,0 +1,25 @@
+
+# Application Configuration
+spring:
+  application:
+    name: demo
+
+  # Kafka Configuration
+  kafka:
+    bootstrap-servers: localhost:9092
+
+    # Producer Configuration
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+    # Consumer Configuration
+    consumer:
+      group-id: netflix-demo-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+# Server Configuration
+server:
+  port: 8085
